@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>store single</title>
+    <!-- Preconnect to Bootstrap and Font Awesome CDN -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <!-- Preconnect to Bootstrap and Font Awesome CDN -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/scss/index.css">
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a aria-label="link" class="navbar-brand" href="/">
+                <img src="assets/images/logo.png" alt="" width="200" height="80" loading="eager" class="img-fluid">
+            </a>
+            <div class="d-flex gap-2 order-lg-last">
+                <button class="navbar-toggler order-4 order-md-0 order-lg-1 form-control shadow-none border-0 p-0"
+                    type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="d-flex" role="search">
+                    <div class="dropdown" style="float:right;">
+                        <button aria-label="click" class="dropbtn bg-light"><svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512" width="1rem" height="1rem" fill="#2a8d8d">
+                                <path
+                                    d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                            </svg></button>
+                        <div class="dropdown-content ps-md-0 ps-4" id="content-menu">
+                            <div class="input-group m-3 p-3 mx-md-auto bg-white">
+                                <input class="form-control border rounded shadow-none" type="search"
+                                    onkeyup="search(this)" placeholder="Search" aria-label="Search">
+                                <button aria-label="search" class="btn btn-primary border"><svg
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="1rem"
+                                        height="1rem" fill="#fff">
+                                        <path
+                                            d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                                    </svg></button>
+                                <div
+                                    class="position-absolute d-none bg-white w-100 border border-top-0 overflow-auto search_response-output top-100 end-0">
+                                    <ul class="list-unstyled pt-2 d-flex flex-column container-fluid mb-0">
+                                        <li class="mb-2">
+                                            <a aria-label="link" href="#" class="text-dark text-decoration-none">
+                                                <div class="d-flex flex-row">
+                                                    <img src="assets/images/kontidor.png"
+                                                        class="img-fluid object-fit-cover rounded-lg mr-1 search_response-img"
+                                                        height="100" width="120" alt="" loading="lazy">
+                                                    <div class="overflow-hidden d-flex align-items-center">
+                                                        <p class="text-uppercase small mb-0 text-center text-truncate">
+                                                            Holiday shopping Holiday shopping
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="mb-2">
+                                            <a aria-label="link" href="#" class="text-dark text-decoration-none">
+                                                <div class="d-flex flex-row">
+                                                    <img src="assets/images/kontidor.png"
+                                                        class="img-fluid object-fit-cover rounded-lg mr-1 search_response-img"
+                                                        height="100" width="120" alt="" loading="lazy">
+                                                    <div class="overflow-hidden d-flex align-items-center">
+                                                        <p class="text-uppercase small mb-0 text-center text-truncate">
+                                                            Holiday shopping Holiday shopping
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="mb-2">
+                                            <a aria-label="link" href="#" class="text-dark text-decoration-none">
+                                                <div class="d-flex flex-row">
+                                                    <img src="assets/images/kontidor.png"
+                                                        class="img-fluid object-fit-cover rounded-lg mr-1 search_response-img"
+                                                        height="100" width="120" alt="" loading="lazy">
+                                                    <div class="overflow-hidden d-flex align-items-center">
+                                                        <p class="text-uppercase small mb-0 text-center text-truncate">
+                                                            Holiday shopping Holiday shopping
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="mb-2">
+                                            <a aria-label="link" href="#" class="text-dark text-decoration-none">
+                                                <div class="d-flex flex-row">
+                                                    <img src="assets/images/kontidor.png"
+                                                        class="img-fluid object-fit-cover rounded-lg mr-1 search_response-img"
+                                                        height="100" width="120" alt="" loading="lazy">
+                                                    <div class="overflow-hidden d-flex align-items-center">
+                                                        <p class="text-uppercase small mb-0 text-center text-truncate">
+                                                            Holiday shopping Holiday shopping
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="mb-2">
+                                            <a aria-label="link" href="#" class="text-dark text-decoration-none">
+                                                <div class="d-flex flex-row">
+                                                    <img src="assets/images/kontidor.png"
+                                                        class="img-fluid object-fit-cover rounded-lg mr-1 search_response-img"
+                                                        height="100" width="120" alt="" loading="lazy">
+                                                    <div class="overflow-hidden d-flex align-items-center">
+                                                        <p class="text-uppercase small mb-0 text-center text-truncate">
+                                                            Holiday shopping Holiday shopping
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="mb-2">
+                                            <a aria-label="link" href="#" class="text-dark text-decoration-none">
+                                                <div class="d-flex flex-row">
+                                                    <img src="assets/images/kontidor.png"
+                                                        class="img-fluid object-fit-cover rounded-lg mr-1 search_response-img"
+                                                        height="100" width="120" alt="" loading="lazy">
+                                                    <div class="overflow-hidden d-flex align-items-center">
+                                                        <p class="text-uppercase small mb-0 text-center text-truncate">
+                                                            Holiday shopping Holiday shopping
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="mb-2">
+                                            <a aria-label="link" href="#" class="text-dark text-decoration-none">
+                                                <div class="d-flex flex-row">
+                                                    <img src="assets/images/kontidor.png"
+                                                        class="img-fluid object-fit-cover rounded-lg mr-1 search_response-img"
+                                                        height="100" width="120" alt="" loading="lazy">
+                                                    <div class="overflow-hidden d-flex align-items-center">
+                                                        <p class="text-uppercase small mb-0 text-center text-truncate">
+                                                            Holiday shopping Holiday shopping
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="collapse navbar-collapse text-center order-last order-0 order-md-1 order-lg-0"
+                id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+                    <li class="nav-item">
+                        <a aria-label="link" class="nav-link mx-3 text-dark fw-bold store-links" aria-current="page"
+                            href="/"><span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a aria-label="link" class="nav-link mx-3 text-dark fw-bold store-links"
+                            href="all-categories.html"><span>Categories</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a aria-label="link" class="nav-link mx-3 text-dark fw-bold store-links" href="all-stores.html">
+                            <span>Stores</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a aria-label="link" class="nav-link mx-3 text-dark fw-bold store-links"
+                            href="blog-section.html">
+                            <span>Blog</span>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Store Section Start -->
+    <main class="store-section py-1 bg-light">
+        <section class="container">
+            <div class="row p-lg-5 p-2 g-md-5 flex-wrap justify-content-center">
+                <!-- Left Side -->
+                <div class="col-lg-9 col-md-10 col-12">
+
+                    <div class="p-md-4 p-2 bg-white shadow rounded">
+                        <h2 class="fw-normal fs-3">Talentless Coupons & Promo Codes Jul 2024
+                        </h2>
+                        <p>
+                            Talentless is an homage to the new wave of creators, innovators, and influencers who`ve made
+                            a name for themselves by going against the conventions of what it means to be “talented."WE
+                            MUST BE DOING SOMETHING RIGHT.
+                        </p>
+                    </div>
+
+                    <!-- Nav & Tabs Section Start-->
+                    <ul class="nav nav-tabs my-3 border-bottom-0" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link btn-primary fw-bold rounded px-2" id="home-tab" data-bs-toggle="tab"
+                                data-bs-target="#home-tab-pane" type="button" role="tab" aria-selected="true">All
+                                Offers</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link btn-primary px-2 rounded fw-bold" id="profile-tab"
+                                data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab"
+                                aria-controls="profile-tab-pane" aria-selected="false">Coupon Code</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link btn-primary px-2 rounded fw-bold" id="contact-tab"
+                                data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab"
+                                aria-controls="contact-tab-pane" aria-selected="false">Deals</button>
+                        </li>
+
+                    </ul>
+                    <!-- Nav & Tabs Section End-->
+
+                    <!-- Tabs Section Start-->
+                    <div class="tab-content" id="myTabContent">
+
+                        <!-- All Stores Tabs -->
+                        <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel"
+                            aria-labelledby="home-tab" tabindex="0">
+                            <div class="d-flex flex-wrap flex-md-nowrap shadow p-3 p-md-0 bg-white my-4">
+                                <div class="mx-auto mx-md-0 p-2 text-center" style="width: 11rem;">
+                                    <a aria-label="link" href="#"><img src="assets/images/kontidor.png"
+                                            class="img-fluid rounded w-100" height="200" width="200" alt="..."></a>
+                                    <span class="">Coupon</span>
+                                </div>
+                                <div class="w-100 p-3 p-xl-4 p-lg-2">
+                                    <h2 class="fs-4 fw-normal text-center text-md-start">Free Shipping on order over $35
+                                    </h2>
+                                    <div
+                                        class="d-flex flex-wrap align-items-center justify-content-md-between justify-content-center  list-unstyled">
+
+
+
+                                        <span class="text-secondary pt-lg-3">
+                                            <p>
+                                                Expire on 2026-12-31
+                                            </p>
+                                            <p class="text-success text-center text-md-start">
+                                                <i class="fa-solid fa-circle-check"></i> Verified
+                                            </p>
+                                        </span>
+
+                                        <span class="list-inline-item "> <a aria-label="link" href="javascript:void(0)"
+                                                class="btn btn-dual text-center" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal">
+                                                <span class="upper fw-bold">Copy & Visit</span>
+                                                <span class="lower">LOVE50</span>
+                                            </a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-wrap flex-md-nowrap shadow p-3 p-md-0 bg-white my-4">
+                                <div class="mx-auto mx-md-0 p-2 text-center" style="width: 11rem;">
+                                    <a aria-label="link" href="#"><img src="assets/images/kontidor.png"
+                                            class="img-fluid rounded w-100" height="200" width="200" alt="..."></a>
+                                    <span class="">Coupon</span>
+                                </div>
+                                <div class="w-100 p-3 p-xl-4 p-lg-2">
+                                    <h2 class="fs-4 fw-normal text-center text-md-start">Free Shipping on order over $35
+                                    </h2>
+                                    <div
+                                        class="d-flex flex-wrap align-items-center justify-content-md-between justify-content-center  list-unstyled">
+
+
+
+                                        <span class="text-secondary pt-lg-3">
+                                            <p>
+                                                Expire on 2026-12-31
+                                            </p>
+                                            <p class="text-success text-center text-md-start">
+                                                <i class="fa-solid fa-circle-check"></i> Verified
+                                            </p>
+                                        </span>
+
+                                        <span class="list-inline-item "> <a aria-label="link" href="javascript:void(0)"
+                                                class="btn btn-dual text-center">
+                                                <span class="upper fw-bold">Copy & Visit</span>
+                                                <span class="lower">LOVE50</span>
+                                            </a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-wrap flex-md-nowrap shadow p-3 p-md-0 bg-white my-4">
+                                <div class="mx-auto mx-md-0 p-2 text-center" style="width: 11rem;">
+                                    <a aria-label="link" href="#"><img src="assets/images/kontidor.png"
+                                            class="img-fluid rounded w-100" height="200" width="200" alt="..."></a>
+                                    <span class="">Coupon</span>
+                                </div>
+                                <div class="w-100 p-3 p-xl-4 p-lg-2">
+                                    <h2 class="fs-4 fw-normal text-center text-md-start">Free Shipping on order over $35
+                                    </h2>
+                                    <div
+                                        class="d-flex flex-wrap align-items-center justify-content-md-between justify-content-center  list-unstyled">
+
+
+
+                                        <span class="text-secondary pt-lg-3">
+                                            <p>
+                                                Expire on 2026-12-31
+                                            </p>
+                                            <p class="text-success text-center text-md-start">
+                                                <i class="fa-solid fa-circle-check"></i> Verified
+                                            </p>
+                                        </span>
+
+                                        <span class="list-inline-item "> <a aria-label="link" href="javascript:void(0)"
+                                                class="btn btn-light text-center border mx-md-3">
+                                                <span class="fw-bold">Copy & Visit</span>
+                                            </a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- All Coupons Tabs -->
+                        <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab"
+                            tabindex="0">
+                            <div class="d-flex flex-wrap flex-md-nowrap shadow p-3 p-md-0 bg-white my-4">
+                                <div class="mx-auto mx-md-0 p-2 text-center" style="width: 11rem;">
+                                    <a aria-label="link" href="#"><img src="assets/images/kontidor.png"
+                                            class="img-fluid rounded w-100" height="200" width="200" alt="..."></a>
+                                    <span class="">Coupon</span>
+                                </div>
+                                <div class="w-100 p-3 p-xl-4 p-lg-2">
+                                    <h2 class="fs-4 fw-normal text-center text-md-start">Free Shipping on order over $35
+                                    </h2>
+                                    <div
+                                        class="d-flex flex-wrap align-items-center justify-content-md-between justify-content-center list-unstyled">
+
+
+
+                                        <span class="text-secondary pt-lg-3">
+                                            <p>
+                                                Expire on 2026-12-31
+                                            </p>
+                                            <p class="text-success text-center text-md-start">
+                                                <i class="fa-solid fa-circle-check"></i> Verified
+                                            </p>
+                                        </span>
+
+                                        <span class="list-inline-item "> <a aria-label="link" href="javascript:void(0)"
+                                                class="btn btn-dual text-center" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal">
+                                                <span class="upper fw-bold">Copy & Visit</span>
+                                                <span class="lower">LOVE50</span>
+                                            </a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- All Deals Tabs -->
+                        <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab"
+                            tabindex="0">
+                            <div class="d-flex flex-wrap flex-md-nowrap shadow p-3 p-md-0 bg-white my-4">
+                                <div class="mx-auto mx-md-0 p-2 text-center" style="width: 11rem;">
+                                    <a aria-label="link" href="#"><img src="assets/images/kontidor.png"
+                                            class="img-fluid rounded w-100" height="200" width="200" alt="..."></a>
+                                    <span class="">Coupon</span>
+                                </div>
+                                <div class="w-100 p-3 p-xl-4 p-lg-2">
+                                    <h2 class="fs-4 fw-normal text-center text-md-start">Free Shipping on order over $35
+                                    </h2>
+                                    <div
+                                        class="d-flex flex-wrap align-items-center justify-content-md-between justify-content-center  list-unstyled">
+
+
+
+                                        <span class="text-secondary pt-lg-3">
+                                            <p>
+                                                Expire on 2026-12-31
+                                            </p>
+                                            <p class="text-success text-center text-md-start">
+                                                <i class="fa-solid fa-circle-check"></i> Verified
+                                            </p>
+                                        </span>
+
+                                        <span class="list-inline-item "> <a aria-label="link" href="javascript:void(0)"
+                                                class="btn btn-light text-center border mx-md-3" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal">
+                                                <span class="fw-bold">Copy & Visit</span>
+                                            </a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Expire Coupons Start-->
+                        <div class="p-3 bg-info-subtle">
+                            <h2 class="fs-5">Expired Coupons</h2>
+                            <div class="d-flex flex-wrap flex-md-nowrap shadow p-3 p-md-0 my-4"
+                                style="background-color: #e0dfe1;">
+                                <div class="mx-auto mx-md-0 p-2 text-center" style="width: 11rem;">
+                                    <a><img src="assets/images/kontidor.png" class="img-fluid rounded w-100 h-100"
+                                            width="200" height="200" alt="..."></a>
+                                    <span class="">Coupon</span>
+                                </div>
+                                <div class="w-100 p-3 p-xl-4 p-lg-0">
+                                    <h2 class="fs-4 fw-normal text-center text-md-start">Free Shipping on order over $35
+                                    </h2>
+                                    <div
+                                        class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between  list-unstyled">
+
+
+
+                                        <span class="text-secondary pt-3">
+                                            <p>
+                                                Expire on 2026-12-31
+                                            </p>
+                                            <p class="text-danger">
+                                                <i class="fa-solid fa-circle-xmark"></i> Expired
+                                            </p>
+                                        </span>
+
+                                        <span class="list-inline-item "> <a aria-label="link" href="javascript:void(0)"
+                                                class="btn btn-dual disabled border-0">
+                                                <span class="upper fw-bold">Copy & Visit</span>
+                                                <span class="lower">LOVE50</span>
+                                            </a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- Expire Coupons End-->
+                    </div>
+                    <!-- Tabs Section End-->
+
+                    <!-- Store Description Start -->
+                    <section>
+                        <div class="p-4 bg-white my-4 shadow rounded">
+                            <p class="fw-normal">
+                                More About Talentless
+                            </p>
+                            <hr>
+                            <p>
+                                Talentless is an homage to the new wave of creators, innovators, and influencers who`ve
+                                made a name for themselves by going against the conventions of what it means to be
+                                “talented."WE MUST BE DOING SOMETHING RIGHT.
+                            </p>
+                        </div>
+                    </section>
+                    <!-- Store Description End -->
+
+                </div>
+                <!-- Right Side -->
+                <div class="col-lg-3 col-md-10 col-12">
+
+                    <div class=" p-4 bg-white text-center shadow rounded ">
+                        <img src="assets/images/kontidor.png" alt="img"
+                            class="rounded-circle img-fluid object-fit-cover h-auto" loading="eager" width="200"
+                            height="200">
+                    </div>
+
+                    <div class="my-lg-4 my-5 p-3 bg-white text-start shadow rounded ">
+                        <h2 class="fs-5 fw-normal">
+                            Share Talentless Coupons
+                            <hr>
+                        </h2>
+                    </div>
+                    <div class=" my-4 p-3 bg-white text-start shadow rounded ">
+                        <h2 class="fs-5 fw-normal">
+                            Related Store
+                            <hr>
+                        </h2>
+                        <div class="row g-2">
+                            <div class="col-6">
+                                <a aria-label="link" href="#"><img src="assets/images/kontidor.png" alt="img"
+                                        class="img-fluid w-100" width="200" height="200" loading="lazy"></a>
+                            </div>
+                            <div class="col-6">
+                                <a aria-label="link" href="#"><img src="assets/images/kontidor.png" alt="img"
+                                        class="img-fluid w-100" width="200" height="200" loading="lazy"></a>
+                            </div>
+                            <div class="col-6">
+                                <a aria-label="link" href="#"><img src="assets/images/kontidor.png" alt="img"
+                                        class="img-fluid w-100" width="200" height="200" loading="lazy"></a>
+                            </div>
+                            <div class="col-6">
+                                <a aria-label="link" href="#"><img src="assets/images/kontidor.png" alt="img"
+                                        class="img-fluid w-100" width="200" height="200" loading="lazy"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Store Section End -->
+
+    <!-- Footer Start-->
+    <footer class="text-center text-lg-start border-top text-black-50">
+        <!-- Section: Links  -->
+        <section class="py-5">
+            <div class="container text-center text-xl-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <p class="mb-4">
+                            <img src="assets/images/logo.png" alt="Logo" class="img-fluid " width="200" height="80"
+                                loading="lazy">
+                        </p>
+                        <p class="fw-bold">No 1 Deals and coupons website on internet. Blissfuldayz give full support of
+                            coupons to its
+                            customers wherever and whenever they need.</p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Categories column -->
+                    <div class="col-md-4 col-lg-4 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <p class="fs-5 text-uppercase fw-bold mb-4">Categories</p>
+                        <p><a aria-label="link" href="#!" class="store-links fw-semibold"><span>Health and
+                                    Beauty</span></a></p>
+                        <p><a aria-label="link" href="#!" class="store-links fw-semibold"><span>Health and
+                                    Beauty</span></a></p>
+                        <p><a aria-label="link" href="#!" class="store-links fw-semibold"><span>Health and
+                                    Beauty</span></a></p>
+                        <p><a aria-label="link" href="#!" class="store-links fw-semibold"><span>Health and
+                                    Beauty</span></a></p>
+                    </div>
+                    <!-- Categories column -->
+
+                    <!-- More Links column -->
+                    <div class="col-md-4 col-lg-4 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <p class="fs-5 text-uppercase fw-bold mb-4">More Links</p>
+                        <p><a aria-label="link" href="#!" class="store-links fw-semibold"><span>Health and
+                                    Beauty</span></a></p>
+                        <p><a aria-label="link" href="#!" class="store-links fw-semibold"><span>Health and
+                                    Beauty</span></a></p>
+                        <p><a aria-label="link" href="#!" class="store-links fw-semibold"><span>Health and
+                                    Beauty</span></a></p>
+                        <p><a aria-label="link" href="#!" class="store-links fw-semibold"><span>Health and
+                                    Beauty</span></a></p>
+                    </div>
+                    <!-- More Links column -->
+
+                    <!-- Social Links column -->
+                    <div class="col-md-12 col-lg-12 col-xl-4 mb-md-0 mb-4">
+                        <!-- Section: Social media -->
+                        <p class="fs-5 text-uppercase fw-bold mb-4">Social Links</p>
+                        <section class="d-flex justify-content-center justify-content-xl-start mb-4 flex-wrap">
+
+                            <!-- Facebook -->
+                            <a aria-label="link"
+                                class="btn btn-primary rounded-5 p-3 btn-floating m-1 text-light d-flex justify-content-center align-items-center shadow"
+                                href="#!" role="button">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="1.2rem"
+                                    height="1.2rem" fill="#fff">
+                                    <path
+                                        d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z" />
+                                </svg>
+                            </a>
+                            <!-- Twitter -->
+                            <a aria-label="link"
+                                class="btn btn-primary rounded-5 p-3 btn-floating m-1 text-light d-flex justify-content-center align-items-center shadow"
+                                href="#!" role="button">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="1.2rem"
+                                    height="1.2rem" fill="#fff">
+                                    <path
+                                        d="M459.4 151.7c.3 4.5 .3 9.1 .3 13.6 0 138.7-105.6 298.6-298.6 298.6-59.5 0-114.7-17.2-161.1-47.1 8.4 1 16.6 1.3 25.3 1.3 49.1 0 94.2-16.6 130.3-44.8-46.1-1-84.8-31.2-98.1-72.8 6.5 1 13 1.6 19.8 1.6 9.4 0 18.8-1.3 27.6-3.6-48.1-9.7-84.1-52-84.1-103v-1.3c14 7.8 30.2 12.7 47.4 13.3-28.3-18.8-46.8-51-46.8-87.4 0-19.5 5.2-37.4 14.3-53 51.7 63.7 129.3 105.3 216.4 109.8-1.6-7.8-2.6-15.9-2.6-24 0-57.8 46.8-104.9 104.9-104.9 30.2 0 57.5 12.7 76.7 33.1 23.7-4.5 46.5-13.3 66.6-25.3-7.8 24.4-24.4 44.8-46.1 57.8 21.1-2.3 41.6-8.1 60.4-16.2-14.3 20.8-32.2 39.3-52.6 54.3z" />
+                                </svg></a>
+                            <!-- Google -->
+                            <a aria-label="link"
+                                class="btn btn-primary rounded-5 p-3 btn-floating m-1 text-light d-flex justify-content-center align-items-center shadow"
+                                href="#!" role="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512"
+                                    width="1.2rem" height="1.2rem" fill="#fff">
+                                    <path
+                                        d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z" />
+                                </svg></a>
+                            <!-- Instagram -->
+                            <a aria-label="link"
+                                class="btn btn-primary rounded-5 p-3 btn-floating m-1 text-light d-flex justify-content-center align-items-center shadow"
+                                href="#!" role="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+                                    width="1.2rem" height="1.2rem" fill="#fff">
+                                    <path
+                                        d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                                </svg></a>
+                            <!-- Linkedin -->
+                            <a aria-label="link"
+                                class="btn btn-primary rounded-5 p-3 btn-floating m-1 text-light d-flex justify-content-center align-items-center shadow"
+                                href="#!" role="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+                                    width="1.2rem" height="1.2rem" fill="#fff">
+                                    <path
+                                        d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z" />
+                                </svg>
+                            </a>
+
+                        </section>
+                        <!-- Section: Social media -->
+                    </div>
+                    <!-- Social Links column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+
+        <!-- Copyright -->
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.15);">
+            © 2024 Copyright <a aria-label="link" href="#" class="text-reset fw-bold">Blissfuldayz</a>. Contact
+            info@Blissfuldayz.com
+            <p>Disclosure: We may earn commission if you use our links/Coupons.</p>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer End-->
+
+    <!-- Modal Start-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Built Bar Coupons & Promo Codes Jun
+                        2024</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <div class="p-lg-2 p-3">
+                            <a aria-label="link" href="#" class="text-decoration-none text-dark">
+                                <div class="text-center">
+                                    <div class="text-center">
+                                        <img src="assets/images/kontidor.png" loading="lazy" alt="img"
+                                            class="img-fluid object-fit-cover col-lg-4 col-md-6">
+                                    </div>
+
+                                    <button class="btn btn-secondary my-2 w-25">Visit Store</button>
+                                    <div>
+                                        <p class="text-center">Get 20% Off Sitewide</p>
+                                        <p class="text-center">Copy and Paste Code At Checkout</p>
+                                    </div>
+
+
+                                    <h2 class="text-center">Code: Get10</h2>
+                                    <button class="btn btn-primary rounded fw-bold px-5">Copy Code
+                                    </button>
+
+                                </div>
+                            </a>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Modal End-->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script defer src="assets/js/search.js"></script>
+
+</body>
+
+</html>
